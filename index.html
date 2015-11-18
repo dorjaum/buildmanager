@@ -17,8 +17,15 @@
 				margin-bottom: 5px;
 			}			
 		</style>
+		<!-- angular -->
 		<script src="angular/angular.js"></script>
 		<script src="angular/angular-route.js"></script>
+
+		<!-- bootstrap -->
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="bootstrap/js/collapse.js"></script>
+
+		<!-- construtora -->
 		<script src="construtora.js"></script>
 		<script src="cadastro/inicial/inicial.js"></script>
 		<script src="cadastro/clientes/clientes.js"></script>
@@ -28,14 +35,14 @@
 
 	</head>	
 	<body ng-app="construtora" class="panel-body">
-		<nav class="navbar navbar-default" width="50%" style="align:center">
-			<div class="navbar-header">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">				
 				<a class="navbar-brand" href="#/inicial">CONSTRUTORA</a>
 			</div>
 			<div class="collapse navbar-collapse" ng-controller="inicialCtrl">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#/inicial" role="button" aria-haspopup="true" aria-expanded="false">CADASTRO</a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CADASTRO<span class="caret"></a>
 						<ul class="dropdown-menu">
 							<li class="{{isActive}}"><a href="#/clientes">CLIENTES</a></li>
 							<li class="{{isActive}}"><a href="#/empresa">EMPRESA</a></li>
