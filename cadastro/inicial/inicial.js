@@ -16,7 +16,12 @@ angular.module('inicial').controller('inicialCtrl', function($scope){
 		{nome:"Usuario", link: "#/usuario"},
 		{nome:"Clientes", link: "#/clientes"},
 		{nome:"Empresa", link: "#/empresa"},
-		{nome:"Fornecedores", link: "#/fornecedores"}		
+		{nome:"Fornecedores", link: "#/fornecedores"},
+		{nome:"Centros de custo", link: "#/inicial"},
+		{nome:"Grupos de Materiais", link: "#/inicial"},
+		{nome:"Unidades de Medida", link: "#/inicial"},
+		{nome:"Materiais e Servicos", link: "#/inicial"},
+		{nome:"Historicos", link: "#/inicial"}
 	];
 	$scope.showSubItensCadastro = function(){
 		$scope.showSubItensCadastro = !$scope.showSubItensCadastro;

@@ -1,1 +1,8 @@
-<div>empresa</div>
+<div ng-controller="empresaCtrl">
+	<form ng-form name="cadastroEmpresa">
+		Código: <input class="form-control" type="text" ng-model="empresa.codigoEmpresa"/>
+		Nome: <input class="form-control" type="text" ng-model="empresa.nomeEmpresa"/>
+
+		<input class="btn btn-info" ng-click="cadastraEmpresa(empresa)"> Cadastro</input>
+	</form>
+</div>
