@@ -1,0 +1,56 @@
+<html>
+	<head class="panel-heading">
+		<title>CONSTRUTORA PR</title>
+		<link rel="stylesheet" typ="text/css" href="bootstrap/css/bootstrap.css">
+		<style>
+			.jumbotron{
+				width: 400px;
+				text-align: center;
+				margin-top:20px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.table{
+				margin-top: 20px;
+			}
+			.form-control {
+				margin-bottom: 5px;
+			}			
+		</style>
+		<script src="angular/angular.js"></script>
+		<script src="angular/angular-route.js"></script>
+		<script src="construtora.js"></script>
+		<script src="cadastro/inicial/inicial.js"></script>
+		<script src="cadastro/clientes/clientes.js"></script>
+		<script src="cadastro/empresa/empresa.js"></script>
+		<script src="cadastro/fornecedores/fornecedores.js"></script>
+		<script src="cadastro/usuario/usuario.js"></script>
+
+	</head>	
+	<body ng-app="construtora" class="panel-body">
+		<nav class="navbar navbar-default" width="50%" style="align:center">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/inicial">CONSTRUTORA</a>
+			</div>
+			<div class="collapse navbar-collapse" ng-controller="inicialCtrl">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#/inicial" role="button" aria-haspopup="true" aria-expanded="false">CADASTRO</a>
+						<ul class="dropdown-menu">
+							<li class="{{isActive}}"><a href="#/clientes">CLIENTES</a></li>
+							<li class="{{isActive}}"><a href="#/empresa">EMPRESA</a></li>
+							<li class="{{isActive}}"><a href="#/fornecedores">FORNECEDORES</a></li>
+							<li class="{{isActive}}"><a href="#/usuario">USUARIO</a></li>							
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div>
+			<div ng-view></div>
+		</div>
+
+	</body>
+</html>
+
+
