@@ -10,12 +10,13 @@ angular.module('inicial', ['ngRoute'])
 
 angular.module('inicial').controller('inicialCtrl', function($scope){
 	$scope.isActive = 'active';
-	$scope.showSubItensCadastro = (1 === 0);
+	$scope.app = 'HOME';
+	$scope.showSubItensCadastro = (1 === 0 );
 	$scope.itensMenuCadastro = [
-		{nome:"USUARIO", link: "#/usuario"},
-		{nome:"CLIENTES", link: "#/clientes"},
-		{nome:"EMPRESA", link: "#/empresa"},
-		{nome:"FORNECEDORES", link: "#/fornecedores"}		
+		{nome:"Usuario", link: "#/usuario"},
+		{nome:"Clientes", link: "#/clientes"},
+		{nome:"Empresa", link: "#/empresa"},
+		{nome:"Fornecedores", link: "#/fornecedores"}		
 	];
 	$scope.showSubItensCadastro = function(){
 		$scope.showSubItensCadastro = !$scope.showSubItensCadastro;

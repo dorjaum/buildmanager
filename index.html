@@ -20,6 +20,9 @@
 		<!-- angular -->
 		<script src="angular/angular.js"></script>
 		<script src="angular/angular-route.js"></script>
+		
+		<!-- jquery -->
+		<script src="jquery/dist/jquery.js"></script>		
 
 		<!-- bootstrap -->
 		<script src="bootstrap/js/bootstrap.js"></script>
@@ -36,19 +39,24 @@
 	</head>	
 	<body ng-app="construtora" class="panel-body">
 		<nav class="navbar navbar-default">
-			<div class="navbar-header">				
-				<a class="navbar-brand" href="#/inicial">CONSTRUTORA</a>
+			<div class="navbar-header">				 				
+				<a class="navbar-brand" href="#/inicial">
+					<span class="glyphicon glyphicon-home" aria-hidden="true"/> 
+					HOME
+				</a>
 			</div>
 			<div class="collapse navbar-collapse" ng-controller="inicialCtrl">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CADASTRO<span class="caret"></a>
-						<ul class="dropdown-menu">
-							<li class="{{isActive}}"><a href="#/clientes">CLIENTES</a></li>
-							<li class="{{isActive}}"><a href="#/empresa">EMPRESA</a></li>
-							<li class="{{isActive}}"><a href="#/fornecedores">FORNECEDORES</a></li>
-							<li class="{{isActive}}"><a href="#/usuario">USUARIO</a></li>							
+						<a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+							Cadastro
+							<span class="caret">
+						</a>
+						<div class="dropdown-menu">
+						<ul ng-repeat="item in itensMenuCadastro">
+							<li ><a href="{{item.link}}">{{item.nome}}</a></li>							
 						</ul>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -56,7 +64,6 @@
 		<div>
 			<div ng-view></div>
 		</div>
-
 	</body>
 </html>
 
