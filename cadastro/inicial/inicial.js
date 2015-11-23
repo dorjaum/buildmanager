@@ -8,10 +8,13 @@ angular.module('inicial', ['ngRoute'])
 	})
 }]);
 
-angular.module('inicial').controller('inicialCtrl', function($scope){
+angular.module('inicial').controller('inicialCtrl', function($scope, $http){
 	$scope.isActive = 'active';
 	$scope.app = 'HOME';
 	$scope.showSubItensCadastro = (1 === 0 );
+
+	//$scope.itensMenuCadastro  = $http.get('http://minhacasa.com.br/itensMenuCadastro/usuario');
+
 	$scope.itensMenuCadastro = [
 		{nome:"Usuario", link: "#/usuario"},
 		{nome:"Clientes", link: "#/clientes"},
@@ -21,7 +24,8 @@ angular.module('inicial').controller('inicialCtrl', function($scope){
 		{nome:"Grupos de Materiais", link: "#/inicial"},
 		{nome:"Unidades de Medida", link: "#/inicial"},
 		{nome:"Materiais e Servicos", link: "#/inicial"},
-		{nome:"Historicos", link: "#/inicial"}
+		{nome:"Historicos", link: "#/inicial"},
+		{nome:"ELDER", link: "#/inicial"}
 	];
 	$scope.showSubItensCadastro = function(){
 		$scope.showSubItensCadastro = !$scope.showSubItensCadastro;

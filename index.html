@@ -4,7 +4,7 @@
 		<link rel="stylesheet" typ="text/css" href="bootstrap/css/bootstrap.css">
 		<style>
 			.jumbotron{
-				width: 400px;
+				width: 800px;
 				text-align: center;
 				margin-top:20px;
 				margin-left: auto;
@@ -15,7 +15,12 @@
 			}
 			.form-control {
 				margin-bottom: 5px;
-			}			
+			}
+            .navbar{
+                width: 1200px;
+                text-align: center;
+                align-self: center;
+            }
 		</style>
 		<!-- angular -->
 		<script src="angular/angular.js"></script>
@@ -37,7 +42,7 @@
 		<script src="cadastro/usuario/usuario.js"></script>
 
 	</head>	
-	<body ng-app="construtora" class="panel-body">
+	<body ng-app="construtora" class="panel-body container">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">				 				
 				<a class="navbar-brand" href="#/inicial">
@@ -61,7 +66,7 @@
 				</ul>
 			</div>
 		</nav>
-		<div>
+		<div class="jumbotron">
 			<div ng-view></div>
 		</div>
 	</body>
