@@ -4,8 +4,7 @@
 		<link rel="stylesheet" typ="text/css" href="bootstrap/css/bootstrap.css">
 		<style>
 			.jumbotron{
-				width: 800px;
-				text-align: center;
+				text-align: left;
 				margin-top:20px;
 				margin-left: auto;
 				margin-right: auto;
@@ -17,7 +16,6 @@
 				margin-bottom: 5px;
 			}
             .navbar{
-                width: 1200px;
                 text-align: center;
                 align-self: center;
             }
@@ -42,7 +40,7 @@
 		<script src="cadastro/usuario/usuario.js"></script>
 
 	</head>	
-	<body ng-app="construtora" class="panel-body container">
+	<body ng-app="construtora" class="panel-body">
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">				 				
 				<a class="navbar-brand" href="#/inicial">
@@ -55,13 +53,14 @@
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
 							Cadastro
-							<span class="caret">
+							<span class="caret"/>
 						</a>
-						<div class="dropdown-menu">
-						<ul ng-repeat="item in itensMenuCadastro">
-							<li ><a href="{{item.link}}">{{item.nome}}</a></li>							
-						</ul>
-						</div>
+                        <ul class="dropdown-menu">
+                            <li><a class="button" href="#/usuario">Usuario</a></li>
+                            <li><a class="button" href="#/clientes">Clientes</a></li>
+                            <li><a class="button" href="#/empresa">Empresa</a></li>
+                            <li><a class="button" href="#/fornecedores">Fornecedores</a></li>
+                        </ul>
 					</li>
 				</ul>
 			</div>
