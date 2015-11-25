@@ -1,28 +1,20 @@
 <style>
-    .conainer {
-        width: 500px;
-        align: left;
-    }
-
 </style>
-<div class="container" ng-controller="empresaCtrl">
-    <table class="table">
-        
-            <tr>
-                <td><label for"codigo">Código: </label></td>
-                <td><input class="form-control" type="text" ng-model="empresa.codigoEmpresa" id="codigo"/></td>
-            </tr>
-            <tr>
-                <td><label for"nome">Nome: </label></td>
-                <td> <input class="form-control" type="text" ng-model="empresa.nomeEmpresa" id="nome"/></td>
-            </tr>
-            <tr>
-                <td><label for"codigo">Código: </label></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><button class="btn btn-info" ng-click="cadastrarEmpresa(empresa)">cadastrar</button></td>                
-            </tr>
-           
-    </table>
+
+<div  ng-controller="empresaCtrl">
+    <div class="row">
+        <div class="col-sm-1"><label for="codigo">Código: </label></div>
+        <div class="col-sm-1"><input class="form-control" type="text" ng-model="empresa.codigoEmpresa" id="codigo"/></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"><label for="nome">Nome: </label></div>
+        <div class="col-sm-1"> <input class="form-control" type="text" ng-model="empresa.nomeEmpresa" id="nome"/></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"><label>Outra coisa: </label></div>
+        <div class="col-sm-1"><input class="form-control" type="text" ng-model="empresa.outraCoisa" id="outraCoisa"/></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"><button class="btn btn-info" ng-click="cadastrarEmpresa(empresa)">cadastrar</button></div>
+    </div>
 </div>
